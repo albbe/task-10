@@ -47,3 +47,18 @@
         numbers.remove(n);
         }
     }
+
+
+// version 2
+public int[] shuffled(int[] numbers){
+        Random random = new Random();
+        int [] shuffled = new int[]{};
+        if (numbers.length == 0){
+            return numbers;
+        }
+        for(int i = 0; i < numbers.length; i++){
+            int n = random.nextInt(10) % 1;   // tanken här är att generera ett random nummer och att detta nummer motsvarar det index-värde som hämtas från numebers arrayen
+            numbers [i] = shuffled[n];
+        }
+            return shuffled;
+         }
